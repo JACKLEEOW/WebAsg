@@ -36,14 +36,16 @@
     </section>
 
     <section id="product-view">
-        <div class="big-product-img">
-            <img src="data/images/003-medium-front.png">
-        </div>
+        <div class="all-imgs">
+            <div class="big-product-img">
+                <img src="data/images/003-medium-front.png">
+            </div>
 
-        <div class="small-product-imgs">
-            <img src="data/images/003-thumb-back.png" alt="Sweater view 1">
-            <img src="data/images/003-thumb-back-angle.png" alt="Sweater View 2">
-            <img src="data/images/003-thumb-front-angle.png" alt="Sweater View 3">
+            <div class="small-product-imgs">
+                <img src="data/images/003-thumb-back.png" alt="Sweater view 1">
+                <img src="data/images/003-thumb-back-angle.png" alt="Sweater View 2">
+                <img src="data/images/003-thumb-front-angle.png" alt="Sweater View 3">
+            </div>
         </div>
 
         <div class="product-info">
@@ -59,7 +61,8 @@
             <form action="https://www.randyconnolly.com/tests/process.php" method="POST">
 
                 <div class="size-options">
-                    <label for="size">Size:</label>
+                    <p>Size:
+                    <p>
                     <div class="size-style">
                         <input type="radio" id="xs" name="size" value="xs">
                         <label for="xs">XS</label>
@@ -77,14 +80,17 @@
                     </div>
                 </div>
 
-                <div class="colour options">
-                    <label for="color">Color:</label>
+                <div class="colour-options">
+                    <legend>Color:</legend>
                     <div class="size-style">
                         <input type="radio" id="cream" name="color" value="cream">
-
+                        <label for="cream"></label>
                         <input type="radio" id="grey" name="color" value="grey">
+                        <label for="grey"></label>
                         <input type="radio" id="navy" name="color" value="navy">
+                        <label for="navy"></label>
                         <input type="radio" id="orange" name="color" value="orange">
+                        <label for="orange"></label>
                     </div>
 
 
@@ -102,8 +108,13 @@
                         <option value=4> 4</option>
                     </select>
                 </div>
-                <button type="submit" class="add-to-cart"> Add to Cart</button> <button class="add-wishlist"> Add to
-                    Wishlist</button>
+
+                <div id="buttons">
+                    <button type="submit" class="add-to-cart"> Add to Cart</button>
+
+                    <button class="add-wishlist"> Add to
+                        Wishlist</button>
+                </div>
 
 
 
@@ -125,9 +136,12 @@
 
     <section id="product-details">
         <div class="mini-headings">
-            <h3>Description</h3>
-            <h3>Specifications</h3>
-            <h3>Care Instructions</h3>
+            <hr class="black">
+            <div class="tabs">
+                <a id="current-tab" href="#">Description</a> <a href="#">Specifications</a> <a href="#">Care
+                    Instructions</a>
+            </div>
+            <hr class="black">
         </div>
         <h2>Product Details</h2>
         <p>This luxurious cable knit sweater is made from 100% merino wool for
@@ -138,19 +152,19 @@
         <h3>Key Features:</h3>
         <table>
             <tr>
-                <td>Material</td>
+                <th>Material</th>
                 <td>100% premium merino wool</td>
             </tr>
             <tr>
-                <td>Style</td>
+                <th>Style</th>
                 <td>Classic cable knit pattern</td>
             </tr>
             <tr>
-                <td>Closures</td>
+                <th>Closures</th>
                 <td>Ribbed cuffs and hem</td>
             </tr>
             <tr>
-                <td>Care</td>
+                <th>Care</th>
                 <td>Dry clean recommended</td>
             </tr>
         </table>
@@ -161,34 +175,52 @@
     <section id="customer-reviews">
 
         <article class="review">
-            <tr>
-                <td class="customer-name">Maria C.</td>
-                <td>★★★★★</td>
-                <td>March 10, 2025</td>
-            </tr>
-            <p>Absolutely stunning sweater! The merino wool is incredibly soft and the cable knit detail is beautiful.
-                Worth the investment.</p>
-        </article>
+            <h2>Customer Reviews</h2>
+            <ul>
+                <li>
+                    <article class="review">
+                        <p class="customer-name">Maria C.</p>
+                        <p class="rating">★★★★★</p>
+                        <p class="date">March 10, 2025</p>
+                    </article>
 
-        <article class="review">
-            <tr>
-                <td class="customer-name">Robert H.</td>
-                <td>★★★★☆</td>
-                <td>March 10, 2025</td>
-            </tr>
-            <p>Bought this for our lead software engineer and she loves it. High quality construction and the wool feels
-                luxurious. Fits true to size.</p>
-        </article>
-        <article class="review">
-            <tr>
-                <td class="customer-name">Nina F.</td>
-                <td>★★★☆☆</td>
-                <td>February 28, 2025</td>
-            </tr>
-            <p>Beautiful sweater but requires dry cleaning which is inconvenient. The quality is excellent though and
-                it's very warm.</p>
+                    <p>Absolutely stunning sweater! The merino wool is incredibly soft and the cable knit detail is
+                        beautiful.
+                        Worth the investment.</p>
+                    <hr class="black">
 
-        </article>
+                </li>
+
+
+                <li>
+                    <article class="review">
+                        <p class="customer-name">Robert H.</p>
+                        <p class="rating">★★★★☆</p>
+                        <p class="date">March 10, 2025</p>
+                    </article>
+
+                    <p>Bought this for our lead software engineer and she loves it. High quality construction and the
+                        wool feels
+                        luxurious. Fits true to size.</p>
+                    <hr class="black">
+                </li>
+
+                <li>
+                    <article class="review">
+
+                        <p class="customer-name">Nina F.</p>
+                        <p class="rating">★★★☆☆</p>
+                        <p class="date">February 28, 2025</p>
+                    </article>
+                    <p>Beautiful sweater but requires dry cleaning which is inconvenient. The quality is excellent
+                        though
+                        and
+                        it's very warm.</p>
+
+                    <hr class="black">
+
+
+                </li>
 
 
 
